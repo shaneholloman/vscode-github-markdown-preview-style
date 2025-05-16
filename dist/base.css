@@ -6,8 +6,8 @@ body,
 }
 
 .github-markdown-body {
-    background-color: var(--color-canvas-default);
-    color: var(--color-fg-default);
+    background-color: var(--bgColor-default);
+    color: var(--fgColor-default);
 }
 
 .github-markdown-body {
@@ -68,10 +68,13 @@ body,
 .github-markdown-body dl,
 .github-markdown-body table,
 .github-markdown-body pre {
-  margin-top: 16px;
-  margin-bottom: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
-.vscode-dark.showEditorSelection .code-line:hover:before {
-    border-left: 3px solid var(--color-fg-default);
+:is(.vscode-dark, .vscode-light).showEditorSelection .code-active-line:before {
+    border-left: 3px solid var(--borderColor-default);
+}
+:is(.vscode-dark, .vscode-light).showEditorSelection .code-line:hover:before {
+    border-left: 3px solid var(--fgColor-muted);
 }
